@@ -22,4 +22,11 @@ public class CaseWorker implements Serializable {
     private String email;
     @Column(name="phone")
     private String phone;
+
+    @PostLoad
+    protected void repair(){
+        if(name!=null)name=name.trim();
+        if(email!=null)email=email.trim();
+        if(phone!=null)phone=phone.trim();
+    }
 }

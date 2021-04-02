@@ -24,7 +24,7 @@ public class CaseServicesImpl implements CaseServices {
 
     @Override
     public Case findById(long id) {
-        return this.caseRepository.findById(id).get();
+        return this.caseRepository.findById(id).orElse(null);
     }
 
     @Override

@@ -24,7 +24,7 @@ public class ClientIntakeServicesImpl implements ClientIntakeServices {
 
     @Override
     public ClientIntake findById(long id) {
-        return this.clientIntakeRepository.findById(id).get();
+        return this.clientIntakeRepository.findById(id).orElse(null);
     }
 
     @Override

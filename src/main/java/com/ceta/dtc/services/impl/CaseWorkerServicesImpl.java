@@ -23,7 +23,7 @@ public class CaseWorkerServicesImpl  implements CaseWorkerServices {
 
     @Override
     public CaseWorker findById(long id) {
-        return this.caseWorkerRepository.findById(id).get();
+        return this.caseWorkerRepository.findById(id).orElse(null);
     }
 
     @Override

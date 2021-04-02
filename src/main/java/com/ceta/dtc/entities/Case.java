@@ -31,5 +31,13 @@ public class Case implements Serializable {
     @JoinColumn(name = "caseworker", referencedColumnName = "id")
     private CaseWorker caseworkerId;
 
+    @PostLoad
+    protected void repair(){
+        if(language!=null)language=language.trim();
+        if(statusNotes!=null)statusNotes=statusNotes.trim();
+        if(caseworkerPccStatus!=null)caseworkerPccStatus=caseworkerPccStatus.trim();
+    }
+
+
 
 }
