@@ -5,7 +5,7 @@
 FROM adoptopenjdk/openjdk11:alpine-jre
 
 # Refer to Maven build -> finalName
-ARG JAR_FILE=target/dtc-1.0.0.jar
+ARG JAR_FILE=docker/dtc-1.0.0.jar
 
 # cd /opt/app
 WORKDIR /opt/app
